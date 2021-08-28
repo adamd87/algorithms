@@ -8,33 +8,30 @@ import java.util.Arrays;
 class Main {
     public static void main(String[] args) {
         arrayOfRandomUniqueNumbers(5);
-
     }
 
-    public static int[] arrayOfRandomUniqueNumbers(int n) {
+    public static void arrayOfRandomUniqueNumbers(int n) {
         int[] array = new int[n];
 
         do {
             for (int i = 0; i < n; i++) {
-                array[i] = (int) (Math.random() * 10);
+                array[i] = (int) (Math.random() * 100);
                 for (int j = 0; j < i; j++) {
                     while (array[i] == array[j]) {
-                        array[i] = (int) (Math.random() * -10);
+                        array[i] = (int) (Math.random() * -100);
                         j = 0;
                     }
                 }
             }
         } while (!isEqualZero(array));
-        System.out.println(Arrays.toString(array));
-        System.out.println(findSum(array));
-        System.out.println(isEqualZero(array));
 
-        return array;
+        System.out.println(Arrays.toString(array));
+        System.out.println("Sum = " + findSum(array));
+        System.out.println(isEqualZero(array));
     }
 
     public static boolean isEqualZero(int[] array) {
-        if (findSum(array) == 0) return true;
-        return false;
+        return  (findSum(array) == 0);
     }
 
     public static int findSum(int[] array) {
