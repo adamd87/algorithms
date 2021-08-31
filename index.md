@@ -28,6 +28,10 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
  
  ![image](https://user-images.githubusercontent.com/76003029/131582293-ec604123-a672-4364-9732-0c4004265a21.png)
  
+### Rotation of the array
+
+ ![image](https://user-images.githubusercontent.com/76003029/131583630-72849518-35fd-4573-8570-0e669b43c7a9.png)
+ 
  
 ### Jekyll Themes
 
