@@ -1,10 +1,10 @@
-   ## Welcome to algorithms solutions
+##    Welcome to algorithms solutions
 
 You can use the [editor on GitHub](https://github.com/adamd87/algorithms/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-   ### Array of random and unique numbers
+###   Array of random and unique numbers
 
   Array of random unique numbers of length N, the sum of the numbers equal to 0.
 
@@ -19,16 +19,16 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 
 
-   ### Binary representation of an integer
+###   Binary representation of an integer
  
  ![image](https://user-images.githubusercontent.com/76003029/131583130-200b8a4d-7de5-4a19-a40e-8210dd7e908f.png)
 
  
-   ### A binary gap within a positive integer 
+###   A binary gap within a positive integer 
  
  ![image](https://user-images.githubusercontent.com/76003029/131582293-ec604123-a672-4364-9732-0c4004265a21.png)
  
-   ### Rotation of the array
+###   Rotation of the array
 
  ![image](https://user-images.githubusercontent.com/76003029/131583630-72849518-35fd-4573-8570-0e669b43c7a9.png)
  
