@@ -8,15 +8,30 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 Array of random unique numbers of length N, the sum of the numbers equal to 0.
 
-
-
 ```markdown
 ![image](https://user-images.githubusercontent.com/76003029/131581334-00e622cd-d281-471c-9c07-aaf5b5fc21fc.png)
+Format: ![Alt Text](url)
 ![image](https://user-images.githubusercontent.com/76003029/131581450-928a8d33-4499-4f3d-9683-fed9b00c0065.png)
+Format: ![Alt Text](url)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
+### A binary gap within a positive integer
+
+Binary representation of an integer.
+
+ ```markdown
+ ![image](https://user-images.githubusercontent.com/76003029/131582021-05bcc355-2d5f-4c96-8265-2450ab9792e3.png)
+ Format: ![Alt Text](url)
+ ```
+ 
+ Binary gap within a positive integer N.
+ 
+ ```markdown
+ ![image](https://user-images.githubusercontent.com/76003029/131582293-ec604123-a672-4364-9732-0c4004265a21.png)
+ Format: ![Alt Text](url)
+ ```
 ### Jekyll Themes
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/adamd87/algorithms/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
