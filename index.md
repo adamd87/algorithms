@@ -5,9 +5,39 @@
 
   Array of random unique numbers of length N, the sum of the numbers equal to 0.
 
- ![image](https://user-images.githubusercontent.com/76003029/131581334-00e622cd-d281-471c-9c07-aaf5b5fc21fc.png)
+```
+public static void arrayOfRandomUniqueNumbers(int n) {
+        int[] array = new int[n];
 
- ![image](https://user-images.githubusercontent.com/76003029/131581450-928a8d33-4499-4f3d-9683-fed9b00c0065.png) 
+        do {
+            for (int i = 0; i < n; i++) {
+                array[i] = (int) (Math.random() * 100);
+                for (int j = 0; j < i; j++) {
+                    while (array[i] == array[j]) {
+                        array[i] = (int) (Math.random() * -100);
+                        j = 0;
+                    }
+                }
+            }
+        } while (!isEqualZero(array));
+
+        System.out.println(Arrays.toString(array));
+        System.out.println("Sum = " + findSum(array));
+        System.out.println(isEqualZero(array));
+    }
+
+    public static boolean isEqualZero(int[] array) {
+        return  (findSum(array) == 0);
+    }
+
+    public static int findSum(int[] array) {
+        int sum = 0;
+        for (int value : array) {
+            sum += value;
+        }
+        return sum;
+    }
+```
  
   
 ###   Rotation
