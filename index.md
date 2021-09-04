@@ -57,7 +57,7 @@ public static int[] cyclingRotation(int[] A, int K) {
  
  
 ###   Odd occurrences
-  Value that occurs in a odd number of elements
+  Value that occurs in a odd number of elements.
   
 ```java
 public static int oddOccurrences(int[] A) {
@@ -78,7 +78,7 @@ public static int oddOccurrences(int[] A) {
     }
 ```
 ###   Binary
-  Binary representation of an integer
+  Binary representation of an integer.
  
 ```java
 public static void binaryRepresentation(int N) {
