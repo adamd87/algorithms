@@ -45,13 +45,12 @@ public static void arrayOfRandomUniqueNumbers(int n) {
   Given an array A consisting of N integers, each element of A will be shifted to the right K times, return the array A rotated K times.  
   
 ```java
-    public static int[] cyclingRotation(int[] A, int K) {
+public static int[] cyclingRotation(int[] A, int K) {
         int[] result = new int[A.length];
         
         for (int i = 0; i <= A.length - 1; i++) {
             result[(i + K) % A.length] = A[i];
-        }      
-        
+        }       
         return result;
     }
 ```
@@ -60,19 +59,66 @@ public static void arrayOfRandomUniqueNumbers(int n) {
 ###   Odd occurrences
   Value that occurs in a odd number of elements
   
-  ![image](https://user-images.githubusercontent.com/76003029/132076172-1c64c1ef-5a3b-4e09-8fca-b0d7665f98b5.png)
-  
-
+```java
+public static int oddOccurrences(int[] A) {
+        int result = 0;
+        for (final int j : A) {
+            int count = 0;
+            for (final int k : A) {
+                if (j == k) {
+                    count++;
+                }
+            }
+            if (count == 1) {
+                result = j;
+                break;
+            }
+        }
+        return result;
+    }
+```
 ###   Binary
   Binary representation of an integer
  
- ![image](https://user-images.githubusercontent.com/76003029/131583130-200b8a4d-7de5-4a19-a40e-8210dd7e908f.png)
- 
+```java
+public static void binaryRepresentation(int N) {
+        System.out.println("Binary representation of " + N + ":");
+        for (int i = 15; i >= 0; i--) {
+            if ((N & 0b1 << i) != 0b0)
+                System.out.print("1");
+            else
+                System.out.print("0");
+        }
+    }
+```
  
 ###   Binary gap 
   A binary gap within a positive integer
  
- ![image](https://user-images.githubusercontent.com/76003029/131582293-ec604123-a672-4364-9732-0c4004265a21.png)
+```java
+public static int binaryGap(int N) {
+        String binary = Integer.toBinaryString(N);
+        int count = 0;
+        int tempCount = 0;
+
+        for (int i = 0; i < binary.length(); i++) {
+            if (binary.charAt(i) == '0') {
+                if (i > 0 && binary.charAt(i - 1) == '1') {
+                    tempCount++;
+                } else {
+                    if (tempCount > 0) tempCount++;
+                }
+            } else if (binary.charAt(i) == '1') {
+                if (tempCount > 0 && tempCount > count) {
+                    count = tempCount;
+                }
+                tempCount = 0;
+            }
+        }
+        System.out.println("\nThe largest binary gap of " + N + ":\n" + count);
+        return count;
+    }
+```
 
 
  
