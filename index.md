@@ -93,7 +93,8 @@ public static void binaryRepresentation(int N) {
 ```
  
 ###   Binary gap 
-  A binary gap within a positive integer
+  A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
+    Returns the sum of the zeros of the greater binary gap.
  
 ```java
 public static int binaryGap(int N) {
