@@ -43,7 +43,18 @@ public static void arrayOfRandomUniqueNumbers(int n) {
 ###   Rotation
   Rotation of the array
 
- ![image](https://user-images.githubusercontent.com/76003029/131583630-72849518-35fd-4573-8570-0e669b43c7a9.png)
+```java
+    public static int[] cyclingRotation(int[] A, int K) {
+        int[] result = new int[A.length];
+
+        // each loop returns index A[i] in the result array
+        for (int i = 0; i <= A.length - 1; i++) {
+            result[(i + K) % A.length] = A[i];
+        }
+        System.out.println(Arrays.toString(result));
+        return result;
+    }
+```
  
  
 ###   Odd occurrences
