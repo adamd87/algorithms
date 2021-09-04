@@ -5,7 +5,7 @@
 
   Array of random unique numbers of length N, the sum of the numbers equal to 0.
 
-```
+```java
 public static void arrayOfRandomUniqueNumbers(int n) {
         int[] array = new int[n];
 
