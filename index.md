@@ -56,7 +56,7 @@
 ```
 
 ###  Finds a missing element
-    Finds a missing element in a given array.
+   Finds a missing element in a given array.
     
 ```java
     public static int findMissingElement(int[] A){
