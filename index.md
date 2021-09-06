@@ -6,11 +6,11 @@
   Array of random unique numbers of length N, the sum of the numbers equal to 0.
 
 ```java
-public static void arrayOfRandomUniqueNumbers(int n) {
-        int[] array = new int[n];
+    public static void arrayOfRandomUniqueNumbers(int N) {
+        int[] array = new int[N];
 
         do {
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < N; i++) {
                 array[i] = (int) (Math.random() * 100);
                 for (int j = 0; j < i; j++) {
                     while (array[i] == array[j]) {
@@ -45,7 +45,7 @@ public static void arrayOfRandomUniqueNumbers(int n) {
   Given an array A consisting of N integers, each element of A will be shifted to the right K times, return the array A rotated K times.  
   
 ```java
-public static int[] cyclingRotation(int[] A, int K) {
+    public static int[] cyclingRotation(int[] A, int K) {
         int[] result = new int[A.length];
         
         for (int i = 0; i <= A.length - 1; i++) {
@@ -60,7 +60,7 @@ public static int[] cyclingRotation(int[] A, int K) {
   Value that occurs in a odd number of elements.
   
 ```java
-public static int oddOccurrences(int[] A) {
+    public static int oddOccurrences(int[] A) {
         int result = 0;
         for (final int j : A) {
             int count = 0;
@@ -81,7 +81,7 @@ public static int oddOccurrences(int[] A) {
   Binary representation of an integer.
  
 ```java
-public static void binaryRepresentation(int N) {
+    public static void binaryRepresentation(int N) {
         System.out.println("Binary representation of " + N + ":");
         for (int i = 15; i >= 0; i--) {
             if ((N & 0b1 << i) != 0b0)
@@ -97,7 +97,7 @@ public static void binaryRepresentation(int N) {
     Returns the sum of the zeros of the greater binary gap.
  
 ```java
-public static int binaryGap(int N) {
+    public static int binaryGap(int N) {
         String binary = Integer.toBinaryString(N);
         int count = 0;
         int tempCount = 0;
@@ -118,6 +118,25 @@ public static int binaryGap(int N) {
         }
         System.out.println("\nThe largest binary gap of " + N + ":\n" + count);
         return count;
+    }
+```
+
+###  Count of moves
+  Calculates the minimum number of moves from position X to Y.
+  
+```java
+    public static int move(int X, int Y, int D) {
+        int distance = X + D;
+        int numOfMoves = 1;
+
+        if (X == Y) {
+            return 0;
+        }
+        while (distance < Y) {
+            distance = distance + D;
+            numOfMoves += 1;
+        }
+        return numOfMoves;
     }
 ```
 
