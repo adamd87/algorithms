@@ -1,4 +1,4 @@
-##   My algorithms solutions
+##   Algorithms solutions
 
 
 ###   Array of unique numbers
