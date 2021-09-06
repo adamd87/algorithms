@@ -54,7 +54,24 @@
         return result;
     }
 ```
- 
+
+###  Finds a missing element
+    Finds a missing element in a given array.
+    
+```java
+    public static int findMissingElement(int[] A){
+        int sum = 0;
+        int max = 0;
+
+        for (int element : A){
+            sum += element;
+            if(element > max)
+                max = element;
+        }
+
+        return (max * (max + 1) / 2) - sum;
+    }
+``` 
  
 ###   Odd occurrences
   Value that occurs in a odd number of elements.
