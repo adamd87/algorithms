@@ -3,7 +3,7 @@
 
 ###   Array of unique numbers
 
-  Array of random unique numbers of length N, the sum of the numbers equal to 0.
+  `Array of random unique numbers of length N, the sum of the numbers equal to 0.`
 
 ```java
     public static void arrayOfRandomUniqueNumbers(int N) {
@@ -41,8 +41,8 @@
  
   
 ###   Rotation
-  Rotation of the array.
-  Given an array A consisting of N integers, each element of A will be shifted to the right K times, return the array A rotated K times.  
+ `Rotation of the array.
+  Given an array A consisting of N integers, each element of A will be shifted to the right K times, return the array A rotated K times.`  
   
 ```java
     public static int[] cyclingRotation(int[] A, int K) {
@@ -56,7 +56,7 @@
 ```
 
 ###  Finds a missing element
-   Finds a missing element in a given array.
+   `Finds a missing element in a given array.`
     
 ```java
     public static int findMissingElement(int[] A){
@@ -74,7 +74,7 @@
 ``` 
  
 ###   Odd occurrences
-  Value that occurs in a odd number of elements.
+  `Value that occurs in a odd number of elements.`
   
 ```java
     public static int oddOccurrences(int[] A) {
@@ -95,7 +95,7 @@
     }
 ```
 ###   Binary
-  Binary representation of an integer.
+  `Binary representation of an integer.`
  
 ```java
     public static void binaryRepresentation(int N) {
@@ -110,8 +110,8 @@
 ```
  
 ###   Binary gap 
-  A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
-    Returns the sum of the zeros of the greater binary gap.
+  `A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
+    Returns the sum of the zeros of the greater binary gap.`
  
 ```java
     public static int binaryGap(int N) {
@@ -139,7 +139,7 @@
 ```
 
 ###  Count of moves
-  Calculates the minimum number of moves from position X to Y.
+ `Calculates the minimum number of moves from position X to Y.`
   
 ```java
     public static int move(int X, int Y, int D) {
