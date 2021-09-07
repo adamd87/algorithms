@@ -1,4 +1,4 @@
-##   Algorithms solutions
+>##   Algorithms solutions
 
 
 >### Array of unique numbers
@@ -66,7 +66,6 @@
           if(element > max)
               max = element;
       }
-
       return (max * (max + 1) / 2) - sum;
   }
 ``` 
