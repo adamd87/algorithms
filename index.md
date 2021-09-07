@@ -1,5 +1,4 @@
->## ALGORITHMS SOLUTIONS
-
+>## Algorithms solutions
 
 >### Array of unique numbers
 >Array of random unique numbers of length N, the sum of the numbers equal to 0.
@@ -52,7 +51,8 @@
       for (int i = 0; i < A.length; i++) {
           if (i < x.length)
               x[i] = A[i];
-          else y[i - x.length] = A[i];
+          else 
+              y[i - x.length] = A[i];
       }
       for (int element : x) {
           sumX = sumX + element;
