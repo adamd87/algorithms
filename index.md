@@ -38,7 +38,7 @@
   }
 ```
 
->### Absolute Difference
+>### Absolute difference
 >The absolute difference between the parts of split array.
 
 ```java
