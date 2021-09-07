@@ -37,6 +37,36 @@
       return sum;
   }
 ```
+
+>### Absolute Difference
+>The absolute difference between the parts of split array.
+
+```java
+  public static int absoluteDifferenceOfSplitArray(int[] A) {
+      int sumX = 0;
+      int sumY = 0;
+
+      int[] x = new int[(A.length + 1) / 2];
+      int[] y = new int[A.length - x.length];
+
+      for (int i = 0; i < A.length; i++) {
+          if (i < x.length)
+              x[i] = A[i];
+          else y[i - x.length] = A[i];
+      }
+      for (int element : x) {
+          sumX = sumX + element;
+      }
+      for (int element : y) {
+          sumY = sumY + element;
+      }
+      System.out.println(Arrays.toString(x));
+      System.out.println(Arrays.toString(y));
+      System.out.println("Absolute difference: ");
+
+      return Math.abs(sumX - sumY);
+  }
+```
  
   
 >### Rotation
