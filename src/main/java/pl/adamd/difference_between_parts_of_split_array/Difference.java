@@ -32,7 +32,10 @@ interface Difference {
         return Math.abs(sumX - sumY);
     }
 
-
+    /**
+     * @param A array of integers
+     * @return Minimal difference between to parts of split array
+     */
     static int minimalDifference(int[] A) {
         int result = 0;
         for (int i = 1; i < A.length; i++) {
@@ -53,10 +56,8 @@ interface Difference {
 
             for (int k = 0; k < x.length-1; k++) {
                 sumX = sumX + x[k];
-
                 for (int z = k+1; z < y.length; z++) {
                     sumY = sumY + y[z];
-
                     if (Math.abs(sumX - sumY) < diff)
                         diff = Math.abs(sumX - sumY);
                 }
@@ -66,6 +67,4 @@ interface Difference {
         System.out.println("Minimal difference: ");
         return result;
     }
-
-
 }
