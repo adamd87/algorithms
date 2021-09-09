@@ -239,5 +239,25 @@
   }
 ```
 
+>### Permutations
+>Checks if array A is a permutation, returns "1" if it is, or "0" if it isn't.
+
+```java
+  public static int permutation(int[] A){
+      Set<Integer> integerSet = new HashSet<>();
+      int max = 0;
+      int result = 0;
+
+      for (int element : A) {
+          integerSet.add(element);
+          max = Math.max(max, element);
+      }
+      if (max != A.length) return result;
+      if (integerSet.size() == A.length) result = 1;
+
+      return result;
+    }
+```
+
  
 
