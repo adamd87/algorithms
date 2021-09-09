@@ -220,6 +220,24 @@
   }
 ```
 
+>### Possibility of movement
+>The move can be made when the array element equals X and returns the index of the array element, otherwise returns -1. 
+
+```java
+  public static int earliestPossibilityToMove(int X, int[] A) {
+      int result = 0;
+      for (int i = 0; i < A.length; i++) {
+          if (A[i] > X) {
+              result = -1;
+              break;
+          }
+          if (A[i] == X) {
+              result = i;
+          }
+      }
+      return result;
+  }
+```
 
  
 
