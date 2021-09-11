@@ -219,7 +219,7 @@
 ```
 
 >### Max counters
->Calculates the values of the counters after all alternating operiations: increments the counter by 1 or sets the value of all counters to the current maximum.
+>Calculates the values of the counters after all alternating operations: increments the counter by 1 or sets the value of all counters to the current maximum.
 
 ```java
   public static int[] maxCount(int N, int[] A){
