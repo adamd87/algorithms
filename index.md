@@ -238,11 +238,12 @@
               min = max;
           }
       }
+      
       for (int i = 0; i < N; i++) {
           if (counter[i] < min)
               counter[i] = min;
       }
-      System.out.println(Arrays.toString(counter));
+      
       return counter;
   }
 ```
