@@ -1,5 +1,3 @@
->## Algorithms solutions
-
 >### Array of unique numbers
 >Array of random unique numbers of length N, the sum of the numbers equal to 0.
 
@@ -217,6 +215,35 @@
           numOfMoves += 1;
       }
       return numOfMoves;
+  }
+```
+
+>### Max counters
+>Calculates the values of the counters after all alternating operiations: increments the counter by 1 or sets the value of all counters to the current maximum.
+
+```java
+  public static int[] maxCount(int N, int[] A){
+      int[] counter = new int[N];
+      int max = -1;
+      int min = 0;
+
+      for (int element : A) {
+          if (element >= 1 && element <= N) {
+              if (counter[element - 1] < min)
+                  counter[element - 1] = min;
+              counter[element - 1] = counter[element - 1] + 1;
+              if (counter[element - 1] > max)
+                  max = counter[element - 1];
+          } else if (element == N + 1) {
+              min = max;
+          }
+      }
+      for (int i = 0; i < N; i++) {
+          if (counter[i] < min)
+              counter[i] = min;
+      }
+      System.out.println(Arrays.toString(counter));
+      return counter;
   }
 ```
 
