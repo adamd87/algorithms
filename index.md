@@ -287,5 +287,20 @@
     }
 ```
 
- 
+>### Smallest positive integer
+>Finds smallest positive integer not in the given sequence.
+
+```java
+  public static int findMissingInt(int[] A) {
+      int result = 1;
+      Arrays.sort(A);
+
+      for (int element : A) {
+          if (element == result) {
+              result++;
+          }
+      }
+      return result;
+  }
+```
 
