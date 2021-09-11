@@ -1,11 +1,13 @@
 package pl.adamd.counting_elements;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
 interface CountingElements {
     /**
      * The move can be made when the array element equals X.
+     *
      * @param X an integer representing the first possible chance for the move to be executed.
      * @param A an array of integers.
      * @return "-1" if any element of an array is bigger then X, else return index of element equals X.
@@ -26,10 +28,11 @@ interface CountingElements {
 
     /**
      * Check whether array A is a permutation.
-     * @param A an array of integers
+     *
+     * @param A an array of integers.
      * @return "1" if array A is a permutation, return "0" if it's not a permutation.
      */
-    static int permutation(int[] A){
+    static int permutation(int[] A) {
         Set<Integer> integerSet = new HashSet<>();
         int max = 0;
         int result = 0;
@@ -48,11 +51,12 @@ interface CountingElements {
 
     /**
      * Calculates the values of the counters.
-     * @param N count of counters
-     * @param A array of integers
+     *
+     * @param N count of counters.
+     * @param A an array of integers.
      * @return an array of counters incremented by 1, or an array of all counters set to the current maximum.
      */
-    static int[] maxCount(int N, int[] A){
+    static int[] maxCount(int N, int[] A) {
         int[] counter = new int[N];
         int max = -1;
         int min = 0;
@@ -73,5 +77,23 @@ interface CountingElements {
                 counter[i] = min;
         }
         return counter;
+    }
+
+    /**
+     * Finds smallest positive integer not in the given sequence.
+     *
+     * @param A an array of integers.
+     * @return smallest positive integer not in the given sequence.
+     */
+    static int findMissingInt(int[] A) {
+        int result = 1;
+        Arrays.sort(A);
+
+        for (int element : A) {
+            if (element == result) {
+                result++;
+            }
+        }
+        return result;
     }
 }
