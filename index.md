@@ -332,7 +332,7 @@
 
       for (int i = 0; i < arr.length; i++) {
           arr[i] = i + A;
-          try{
+          try {
               if (arr[i] % K == 0) count++;
           } catch (ArithmeticException e) {
               System.out.println("You can't divide by 0");
