@@ -304,3 +304,41 @@
   }
 ```
 
+>### Passing cars
+>Counts how many times cars pass each other on the road, 0 means car going left and 1 means car going right.
+
+```java
+  public static int numberOfPairsOfPassingCars(int[] A) {
+      int count = 0;
+      int countOfPasses = 0;
+
+      for (int element : A) {
+          if (element == 0) count++;
+          if (element == 1) countOfPasses += count;
+          if (countOfPasses > 1000000000) return -1;
+      }
+      return countOfPasses;
+  }
+```
+
+>### Counting divisible numbers
+>Counts the number of integers form A to B, inclusive, that can be divided by K.
+
+```java
+  public static int numberOfDivisibleInteger(int A, int B, int K) {
+      int size = (B + 1) - A;
+      int[] arr = new int[size];
+      int count = 0;
+
+      for (int i = 0; i < arr.length; i++) {
+          arr[i] = i + A;
+          try{
+              if (arr[i] % K == 0) count++;
+          } catch (ArithmeticException e) {
+              System.out.println("You can't divide by 0");
+              break;
+          }
+      }
+      return count;
+  }
+```
